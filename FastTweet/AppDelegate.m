@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Social/Social.h>
 
 @implementation AppDelegate
 
@@ -36,6 +37,10 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    if (![SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Account" message:@"You are not signed in to a Twitter account. Go to Settings -> Twitter to sign in." delegate:nil cancelButtonTitle:@"Okay" otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

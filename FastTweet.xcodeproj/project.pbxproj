@@ -23,6 +23,7 @@
 		FC46B387171B96F7008C8B50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46B362171B96F7008C8B50 /* Foundation.framework */; };
 		FC46B38F171B96F7008C8B50 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC46B38D171B96F7008C8B50 /* InfoPlist.strings */; };
 		FC46B392171B96F7008C8B50 /* FastTweetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46B391171B96F7008C8B50 /* FastTweetTests.m */; };
+		FC46B39C171B989F008C8B50 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC46B39B171B989F008C8B50 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		FC46B38E171B96F7008C8B50 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC46B390171B96F7008C8B50 /* FastTweetTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastTweetTests.h; sourceTree = "<group>"; };
 		FC46B391171B96F7008C8B50 /* FastTweetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastTweetTests.m; sourceTree = "<group>"; };
+		FC46B39B171B989F008C8B50 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC46B39C171B989F008C8B50 /* Social.framework in Frameworks */,
 				FC46B361171B96F7008C8B50 /* UIKit.framework in Frameworks */,
 				FC46B363171B96F7008C8B50 /* Foundation.framework in Frameworks */,
 				FC46B365171B96F7008C8B50 /* CoreGraphics.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		FC46B354171B96F7008C8B50 = {
 			isa = PBXGroup;
 			children = (
+				FC46B39B171B989F008C8B50 /* Social.framework */,
 				FC46B366171B96F7008C8B50 /* FastTweet */,
 				FC46B38A171B96F7008C8B50 /* FastTweetTests */,
 				FC46B35F171B96F7008C8B50 /* Frameworks */,

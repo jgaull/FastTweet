@@ -24,7 +24,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self showTweetView:NO];
+    [self showTweetView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,22 +37,18 @@
     [self dismissTweetView];
 }
 
-- (void)showTweetView:(BOOL)animated {
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-    {
-        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        
-        tweetSheet.completionHandler = ^(SLComposeViewControllerResult result) {
-            [self dismissTweetView];
-        };
-        
-        [self presentViewController:tweetSheet animated:animated completion:nil];
-    }
+- (void)showTweetView {
+    SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    tweetSheet.completionHandler = ^(SLComposeViewControllerResult result) {
+        [self dismissTweetView];
+    };
+    
+    [self presentViewController:tweetSheet animated:YES completion:nil];
 }
 
 - (void)dismissTweetView {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self showTweetView:YES];
+        [self showTweetView];
     }];
 }
 
